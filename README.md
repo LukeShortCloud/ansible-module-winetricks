@@ -29,7 +29,7 @@ Module arguments:
 | Name | Required | Default | Description
 | --- | --- | --- | --- |
 | args | Yes | | The arguments to use with Winetricks. |
-| winetricks_binary | No | | Specify a different Winetricks binary to use. This is useful for when multiple versions of Winetricks are installed on a system. |
+| binary | No | | Specify a different Winetricks binary to use. This is useful for when multiple versions of Winetricks are installed on a system. |
 
 
 ## Testing
