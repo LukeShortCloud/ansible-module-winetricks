@@ -28,12 +28,12 @@ options:
         required: false
 
 author:
-    - Luke Short (ekutlails)
+    - Luke Short (ekultails)
 '''
 
 EXAMPLES = '''
 - name: Install the Visual Basic C++ Redistributable 2013
-  wine:
+  winetricks:
     winetricks_binary: /usr/bin/winetricks-20170823
     args: vcrun2013
 '''
