@@ -34,10 +34,10 @@ Module arguments:
 
 ## Testing
 
-A simple Playbook is provided to test that the `winetest` binary will return the version. It is recommended to set the verbosity to 3 with the `ansible-playbook` command to see all of the results from the module.
+A simple Playbook is provided to test that the `winetest` binary will return the version information. The results from the module will also be displayed.
 
 ```
-$ ansible-playbook -vvv test.yml
+$ ansible-playbook test.yml
 ```
 
 

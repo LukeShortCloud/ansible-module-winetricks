@@ -4,9 +4,14 @@
     - name: Make sure that Winericks does not fail with any special checks first
       winetricks:
         args: "--version"
+      register: winetricks_module_output
 
     - name: Test the "winetricks" Ansible module by verifying the Winetricks version
       winetricks:
         args: "--version"
       register: winetricks_var
       failed_when: "'- sha256sum: ' not in winetricks_var.stdout"
+
+    - name: View the Winetricks module output
+      debug:
+        var: winetricks_module_output
