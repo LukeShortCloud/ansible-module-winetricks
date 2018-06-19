@@ -38,6 +38,39 @@ A simple Playbook is provided to test that the `winetest` binary will return the
 
 ```
 $ ansible-playbook test.yml
+PLAY [localhost] **************************************************************************
+
+TASK [Gathering Facts] ********************************************************************
+ok: [localhost]
+
+TASK [Make sure that Winericks does not fail with any special checks first] ***************
+ok: [localhost]
+
+TASK [Test the "winetricks" Ansible module by verifying the Winetricks version] ***********
+skipping: [localhost]
+
+TASK [View the Winetricks module output] **************************************************
+ok: [localhost] => {
+    "winetricks_module_output": {
+        "changed": false, 
+        "cmd": [
+            "/usr/bin/winetricks", 
+            "--unattended", 
+            "--version"
+        ], 
+        "failed": false, 
+        "rc": 0, 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "20180217 - sha256sum: 5ae9eb539ad58eb7437c00ef4bdaa0efd63e6be474c6c8957316f6a54f0911cd\n", 
+        "stdout_lines": [
+            "20180217 - sha256sum: 5ae9eb539ad58eb7437c00ef4bdaa0efd63e6be474c6c8957316f6a54f0911cd"
+        ]
+    }
+}
+
+PLAY RECAP ********************************************************************************
+localhost                  : ok=3    changed=0    unreachable=0    failed=0
 ```
 
 
