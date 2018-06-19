@@ -8,11 +8,9 @@
       register: winetricks_module_output
 
     - name: Test the "winetricks" Ansible module by verifying the Winetricks version
-      winetricks:
-        args: "--version"
-      register: winetricks_var
-      changed_when: False
-      failed_when: "'- sha256sum: ' not in winetricks_var.stdout"
+      fail:
+        msg: This is not a valid Winetricks output for the version information
+      when: "'- sha256sum: ' not in winetricks_module_output.stdout"
 
     - name: View the Winetricks module output
       debug:
